@@ -1,0 +1,41 @@
+#!/bin/bash
+
+export GENERATORS_DIR=generators
+install_prefix=$(realpath $(dirname $(realpath $0))/..)
+
+if   [ -f $HOME/.chipgen.conf ]; then
+    source $HOME/.chipgen.conf
+elif [ -f /etc/chipgen.conf ]; then
+    source /etc/chipgen.conf
+fi
+
+makefile_path="$install_prefix/lib/chipgen/chipgen.mk"
+
+generate() {
+    make -f $makefile_path generate
+}
+
+clean() {
+    make -f $makefile_path clean
+}
+
+usage() {
+    echo "$0 generate|clean|get-include-file"
+}
+
+case "$1" in
+    generate)
+        generate
+        ;;
+    clean)
+        clean
+        ;;
+    get-include-file)
+        echo "$makefile_path"
+        ;;
+    *)
+        usage
+        ;;
+esac
+
+exit 0
