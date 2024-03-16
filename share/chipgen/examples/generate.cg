@@ -1,0 +1,17 @@
+# vim: ft=make noexpandtab
+#
+
+INSTANCES += core1 core2 core3
+
+core1_GENERATOR = testcore
+core1_PARAMETERS =
+core1_FILES = readme.txt
+
+core2_GENERATOR = testcore
+core3_GENERATOR = testcore
+
+#core1_generate:
+#	touch generated.v
+#
+#core1_clean:
+#	rm -f generated.v
