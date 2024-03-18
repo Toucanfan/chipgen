@@ -1,6 +1,6 @@
 #!/bin/bash
 
-export GENERATORS_DIR=generators
+export GENERATORS_DIR=$(realpath generators)
 install_prefix=$(realpath $(dirname $(realpath $0))/..)
 
 

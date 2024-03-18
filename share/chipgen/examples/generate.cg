@@ -3,12 +3,12 @@
 
 INSTANCES += core1 core2 core3
 
-core1_GENERATOR = testcore
+core1_GENERATOR = testgen1
 core1_PARAMETERS =
-core1_FILES = readme.txt
+core1_FILES =
 
-core2_GENERATOR = testcore
-core3_GENERATOR = testcore
+core2_GENERATOR = testgen2
+core3_GENERATOR = testgen1
 
 #core1_generate:
 #	touch generated.v

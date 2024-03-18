@@ -1,0 +1,13 @@
+# vim: ft=make noexpandtab
+
+include $(CHIPGEN_MKFILE)
+
+generated.v:
+	sleep 2
+	touch generated.v
+
+generate: generated.v
+
+clean:
+	rm -f generated.v
+

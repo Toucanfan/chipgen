@@ -1,0 +1,12 @@
+# vim: ft=make noexpandtab
+#
+
+INSTANCES += core1
+
+core1_GENERATOR = testgen2
+
+#core1_generate:
+#	touch generated.v
+#
+#core1_clean:
+#	rm -f generated.v
